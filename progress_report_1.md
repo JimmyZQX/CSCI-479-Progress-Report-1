@@ -151,7 +151,7 @@ title: "SpaceMath: Project Progress Report"
     `  "type": "operator",`\
     `  "priority": 10,`\
     `  "rule": {"2,3": "#1 + #3"}`\
-    `}`\
+    `}`
 
     -   **"alternative"** is suggesting the other ways the user can type
         in this keyword. We will make use of it when we introduce
