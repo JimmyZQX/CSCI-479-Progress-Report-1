@@ -109,7 +109,7 @@ title: "SpaceMath: Project Progress Report"
 3.  **System Design**\
     In this section, we'll introduce the process of how our program can
     translate SpaceMath texts into LaTex, together with the data
-    structures and main algorithms used in the process.
+    structures and main algorithms used in the process.\
     **Programming Tools and Technologies**\
     We choose to implement SpaceMath in JavaScript, for the following
     reasons:
@@ -126,7 +126,7 @@ title: "SpaceMath: Project Progress Report"
         sufficient for the scope of our project. With the simplicity of
         both our input data (nothing but strings) and stored data (maps
         containing mostly strings) there is little need for strict type
-        checking.
+        checking.\
 
     **Dictionary**\
     Before introducing the real algorithm, we first need to introduce
