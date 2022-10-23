@@ -193,7 +193,7 @@ title: "SpaceMath: Project Progress Report"
     We read the math string from left to right and construct the tree
     based on the keyword we find on the way. It would be complicated to
     introduce all the details in the process of parsing the string into
-    a tree, so we will show the process by an example.
+    a tree, so we will show the process by an example.\
     **Example:**\
     We'll show how the math string $(3+4)/pi + 3$ goes through the
     process of tree parsing as an example. In the example, we will
