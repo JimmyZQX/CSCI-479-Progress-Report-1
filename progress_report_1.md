@@ -74,8 +74,8 @@ title: "SpaceMath: Project Progress Report"
     7.  `iso or isomorphic`
 
     We concluded that in the first two cases, if there is a lack of
-    space before and after the "$+$" operator in "$2+3$", or in the
-    second case in between the two multiplied terms "$(2+3)(4+5)$", then
+    space before and after the "+" operator in "2+3", or in the
+    second case in between the two multiplied terms "(2+3)(4+5)", then
     the entire term should be placed in the denominator. If there is a
     space, then the added or multiplied term will be represented outside
     of the fraction (becoming its own term).
@@ -100,7 +100,7 @@ title: "SpaceMath: Project Progress Report"
     will be able to input strings like "iso" or "isomorphic", which will
     allow multiple user input cases for non-standard operators, most of
     which are not found on common keyboards. Overall, these resolutions
-    did not massively alter the build of our product.\
+    did not massively alter the build of our product.
     **Simple Demo**\
     ![image](image4.png)\
     **Testing the Output with MathJax**\
