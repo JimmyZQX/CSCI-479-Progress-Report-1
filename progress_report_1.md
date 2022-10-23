@@ -158,8 +158,8 @@ title: "SpaceMath: Project Progress Report"
         translation in the future.
 
     -   **"type"** is indicating which category the keyword lives in. We
-        currently support types "operator" ($+$ $-$ \_̂), "relation" ($>$
-        $=$ $<$), and "symbol" ($alpha$, $beta$, $pi$). Each category
+        currently support types "operator" (+ $-$ \_̂), "relation" ($>$
+        $=$ $<$), and "symbol" (alpha, $beta$, $pi$). Each category
         shares the same parsing rule.
 
     -   **"priority"** is indicating the priority of the symbol when we
@@ -203,13 +203,13 @@ title: "SpaceMath: Project Progress Report"
     When we scan the string from left to right, the first important
     thing we noticed is the left parenthesis \"(\". We then find the
     corresponding right parenthesis of it. In-between these parentheses
-    is "$3+4$". Therefore, we recursively call the tree construction
-    function on "$3+4$".
+    is "3+4". Therefore, we recursively call the tree construction
+    function on "3+4".
 
-    Constructing a tree for "$3+4$" is not difficult - we can easily
-    find the keyword "$+$" and recognize that it is an operation. The
+    Constructing a tree for "3+4" is not difficult - we can easily
+    find the keyword "+" and recognize that it is an operation. The
     operation needs an argument before and after it, and our only choice
-    is "$3$" and "$4$". So the parse tree for "$3+4$" would be
+    is "3" and "4". So the parse tree for "3+4" would be
 
     ::: center
     ![image](image5.png)
@@ -217,7 +217,7 @@ title: "SpaceMath: Project Progress Report"
 
     Now we put this tree into a holder variable and continue reading.the
     original string. After the right parenthese, the first keyword we
-    find is "$/$", which is an operator. It pulls out the tree structure
+    find is "/", which is an operator. It pulls out the tree structure
     in the holder as its left argument, and simply takes the rest of the
     string as its right argument. Hence the tree we have for this step
     is
@@ -247,7 +247,7 @@ title: "SpaceMath: Project Progress Report"
     :::
 
     Notice that "$pi+3$" in the tree has a key of "/". Finding that the
-    priority of "$+$" is less than "/", we notice that we need to adjust
+    priority of "+" is less than "/", we notice that we need to adjust
     the order of the "+" siblings. We attempt to move to the parent, but
     that is already the child of the root. Thus we say the "+" should
     just live there, so we leave the left argument there, and move the
@@ -278,11 +278,11 @@ title: "SpaceMath: Project Progress Report"
 
     We do nothing if the node is a leaf. Otherwise, we attempt to apply
     the rule. Let's focus on the (/) on the left. All its children have
-    the key "$+$". The rule for "$+$" is `{"2,3": "#1 + #3"}`. In
+    the key "+". The rule for "+" is `{"2,3": "#1 + #3"}`. In
     English words, that means "If the keyword is the 2nd of 3 sibling,
     then replace the branch into \"`#1 + #3`\", in which `#i` means the
     content of the ith sibling". Hence, the branch would be replaced by
-    "$3+4$". Recall that this branch has a parenthese property, so we
+    "3+4". Recall that this branch has a parenthese property, so we
     need to have the parenthese there. (Interaction between operators &
     parenthese will be added later). Hence the tree now looks like
 
@@ -299,7 +299,7 @@ title: "SpaceMath: Project Progress Report"
     :::
 
     Now, as all its children have finished the combine() function, we
-    can work on the ($+$). The "/" works just like "$+$", only with a
+    can work on the (+). The "/" works just like "$+$", only with a
     different replacement rule: `{"2,3": "\\frac{#1}{#3}"}`. Applying
     that, we have
 
@@ -353,7 +353,7 @@ title: "SpaceMath: Project Progress Report"
     -   Add in more keywords
 
     -   Have specific rules for keywords which can be in multiple types:
-        "$<$" for instance, it is a "relation" when surrounded by space,
+        "<" for instance, it is a "relation" when surrounded by space,
         but the symbol "`\langle`" if not. This may lives in M2Tree
         totally, or maybe we want to adjust the dictionary structure.
 
