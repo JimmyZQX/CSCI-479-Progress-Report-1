@@ -246,7 +246,7 @@ title: "SpaceMath: Project Progress Report"
     ![image](image2.png)
     :::
 
-    Notice that "$pi+3$" in the tree has a key of "/". Finding that the
+    Notice that "pi+3" in the tree has a key of "/". Finding that the
     priority of "+" is less than "/", we notice that we need to adjust
     the order of the "+" siblings. We attempt to move to the parent, but
     that is already the child of the root. Thus we say the "+" should
