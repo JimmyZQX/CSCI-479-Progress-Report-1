@@ -59,19 +59,19 @@ title: "SpaceMath: Project Progress Report"
     to define standards for some ambiguous use cases, more specifically
     how SpaceMath should interpret these input strings:
 
-    1.  `$1/2+3$`
+    1.  `1/2+3`
 
-    2.  `$1/(2+3)(4+5)$`
+    2.  `1/(2+3)(4+5)`
 
-    3.  `$sinx$`
+    3.  `sinx`
 
-    4.  `$sinh$`
+    4.  `sinh`
 
-    5.  `$rootN(M)$`
+    5.  `rootN(M)`
 
-    6.  `$sqrtM$`
+    6.  `sqrtM`
 
-    7.  `$iso$ or $isomorphic$`
+    7.  `iso or isomorphic`
 
     We concluded that in the first two cases, if there is a lack of
     space before and after the "$+$" operator in "$2+3$", or in the
