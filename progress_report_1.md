@@ -158,7 +158,7 @@ title: "SpaceMath: Project Progress Report"
         translation in the future.
 
     -   **"type"** is indicating which category the keyword lives in. We
-        currently support types "operator" (+ $-$ \_̂), "relation" ($>$
+        currently support types "operator" (+ $-$ \_̂), "relation" (>
         $=$ $<$), and "symbol" (alpha, $beta$, $pi$). Each category
         shares the same parsing rule.
 
