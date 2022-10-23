@@ -100,7 +100,7 @@ title: "SpaceMath: Project Progress Report"
     will be able to input strings like "iso" or "isomorphic", which will
     allow multiple user input cases for non-standard operators, most of
     which are not found on common keyboards. Overall, these resolutions
-    did not massively alter the build of our product.
+    did not massively alter the build of our product.\
     **Simple Demo**\
     ![image](image4.png)
     **Testing the Output with MathJax**\
