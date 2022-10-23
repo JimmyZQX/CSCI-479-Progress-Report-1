@@ -180,7 +180,7 @@ title: "SpaceMath: Project Progress Report"
     delimiters) and math text (surrounded by the delimiters). The
     algorithm first separates these parts, sends all math parts to the
     next step to convert them to LaTeX, then combines them back after
-    the math parts are converted.
+    the math parts are converted.\
     **Tree construction & priority**\
     We choose the tree structure to be the form storing information when
     we parse the math input as it can keep the information and is easy
