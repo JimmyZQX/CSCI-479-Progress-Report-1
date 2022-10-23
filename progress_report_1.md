@@ -249,7 +249,7 @@ title: "SpaceMath: Project Progress Report"
     ![image](image3.png)
 
     And we have exhausted the string, so that would be how the final
-    parse tree looks like.
+    parse tree looks like.\
     **Tree Combination**\
     After we parsed the tree successfully, we'll combine the tree back
     to a string. In this process, the replacement rules will work to
