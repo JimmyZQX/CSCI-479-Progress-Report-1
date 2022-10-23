@@ -211,9 +211,7 @@ title: "SpaceMath: Project Progress Report"
     operation needs an argument before and after it, and our only choice
     is "3" and "4". So the parse tree for "3+4" would be
 
-    ::: center
     ![image](image5.png)
-    :::
 
     Now we put this tree into a holder variable and continue reading.the
     original string. After the right parenthese, the first keyword we
@@ -222,9 +220,7 @@ title: "SpaceMath: Project Progress Report"
     string as its right argument. Hence the tree we have for this step
     is
 
-    ::: center
     ![image](image10.png)
-    :::
 
     (Note for the left subtree, it has a property value of "pair"
     indicating it should be surrounded by parenthesis).
@@ -233,18 +229,14 @@ title: "SpaceMath: Project Progress Report"
     first keyword here is the symbol $pi$. We just construct a simple
     tree for it:
 
-    ::: center
     ![image](image7.png)
-    :::
 
     and then place it into the holder variable.
 
     The next keyword we met is "+". As it is an operator, it takes the
     pi tree as the left argument and 3 as the right argument.
 
-    ::: center
     ![image](image2.png)
-    :::
 
     Notice that "pi+3" in the tree has a key of "/". Finding that the
     priority of "+" is less than "/", we notice that we need to adjust
@@ -254,9 +246,7 @@ title: "SpaceMath: Project Progress Report"
     "+" together with its right argument to the higher layer. After we
     made the adjustment, the tree would look like:
 
-    ::: center
     ![image](image3.png)
-    :::
 
     And we have exhausted the string, so that would be how the final
     parse tree looks like.\
@@ -268,9 +258,7 @@ title: "SpaceMath: Project Progress Report"
     example to show how tree combination works. Recall that the tree
     looks like
 
-    ::: center
     ![image](image3.png)
-    :::
 
     For combination, we call the combine() function on the root node.
     Combine first call on all its children, then deal with the rest of
@@ -286,27 +274,21 @@ title: "SpaceMath: Project Progress Report"
     need to have the parenthese there. (Interaction between operators &
     parenthese will be added later). Hence the tree now looks like
 
-    ::: center
     ![image](image9.png)
-    :::
 
     The next thing we deal with is the other (/), in which the only
     child is pi. Its rule is `{"1,1": "\\pi"}`, so it will be directly
     replaced by `\pi`.The tree now looks like this:
 
-    ::: center
     ![image](image11.png)
-    :::
 
     Now, as all its children have finished the combine() function, we
-    can work on the (+). The "/" works just like "$+$", only with a
+    can work on the (+). The "/" works just like "+", only with a
     different replacement rule: `{"2,3": "\\frac{#1}{#3}"}`. Applying
     that, we have
 
-    ::: center
     ![image](image6.png)
-    :::
-
+    
     The only thing left is the root and it is not hard to do that
     combination. Hence the final string we end up with is
     `\frac{(3+4)}{\pi}+3`, which is the output we are looking for to
