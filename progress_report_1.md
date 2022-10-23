@@ -102,14 +102,14 @@ title: "SpaceMath: Project Progress Report"
     which are not found on common keyboards. Overall, these resolutions
     did not massively alter the build of our product.
     **Simple Demo**\
-    ![image](image4.png)\
+    ![image](image4.png)
     **Testing the Output with MathJax**\
     ![image](image8.png)
 
 3.  **System Design**\
     In this section, we'll introduce the process of how our program can
     translate SpaceMath texts into LaTex, together with the data
-    structures and main algorithms used in the process.\
+    structures and main algorithms used in the process.
     **Programming Tools and Technologies**\
     We choose to implement SpaceMath in JavaScript, for the following
     reasons:
@@ -180,7 +180,7 @@ title: "SpaceMath: Project Progress Report"
     delimiters) and math text (surrounded by the delimiters). The
     algorithm first separates these parts, sends all math parts to the
     next step to convert them to LaTeX, then combines them back after
-    the math parts are converted.\
+    the math parts are converted.
     **Tree construction & priority**\
     We choose the tree structure to be the form storing information when
     we parse the math input as it can keep the information and is easy
@@ -193,7 +193,7 @@ title: "SpaceMath: Project Progress Report"
     We read the math string from left to right and construct the tree
     based on the keyword we find on the way. It would be complicated to
     introduce all the details in the process of parsing the string into
-    a tree, so we will show the process by an example.\
+    a tree, so we will show the process by an example.
     **Example:**\
     We'll show how the math string $(3+4)/pi + 3$ goes through the
     process of tree parsing as an example. In the example, we will
@@ -249,7 +249,7 @@ title: "SpaceMath: Project Progress Report"
     ![image](image3.png)
 
     And we have exhausted the string, so that would be how the final
-    parse tree looks like.\
+    parse tree looks like.
     **Tree Combination**\
     After we parsed the tree successfully, we'll combine the tree back
     to a string. In this process, the replacement rules will work to
@@ -292,7 +292,7 @@ title: "SpaceMath: Project Progress Report"
     The only thing left is the root and it is not hard to do that
     combination. Hence the final string we end up with is
     `\frac{(3+4)}{\pi}+3`, which is the output we are looking for to
-    input `(3+4)/pi + 3`.\
+    input `(3+4)/pi + 3`.
 
 4.  **Reflection on Challenges**\
     One major challenge we are having is to allow our program to be more
@@ -314,7 +314,7 @@ title: "SpaceMath: Project Progress Report"
     A difficulty with using scrum is that it takes time to use, and can
     feel like extra administrative work at times, getting in the way of
     the real work. But it is good practice for keeping track of things
-    and making sure that progress goes in the right direction.\
+    and making sure that progress goes in the right direction.
 
 5.  **Plan for the Rest of the Semester**\
     Here is a list of future works needs to be done:
